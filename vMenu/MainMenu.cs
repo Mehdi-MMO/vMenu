@@ -390,7 +390,7 @@ namespace vMenuClient
             }
 
             bool canUseMenu()
-            {1f
+            {
                 if (GetSettingsBool(Setting.vmenu_menu_staff_only) == false) return true;
                 else if (IsAllowed(Permission.Staff)) return true;
                 return false;
