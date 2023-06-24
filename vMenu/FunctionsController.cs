@@ -67,7 +67,6 @@ namespace vMenuClient
             // Always needed
             Tick += AnimationsAndInteractions;
             Tick += PlayerClothingAnimationsController;
-            Tick += MiscRecordingKeybinds;
             Tick += MiscSettings;
             Tick += GeneralTasks;
             Tick += GcTick;
@@ -1023,7 +1022,7 @@ namespace vMenuClient
         }
 
         #endregion
-        
+
         #region Join / Quit notifications (via events)
         /// <summary>
         /// Runs join/quit notification checks.
