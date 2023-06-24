@@ -56,7 +56,6 @@ namespace vMenuClient
             ? vMenuShared.ConfigManager.GetSettingsInt(vMenuShared.ConfigManager.Setting.vmenu_teleport_to_wp_keybind_key)
             : 168; // 168 (F7 by default)
         public bool KbDriftMode { get; private set; } = UserDefaults.KbDriftMode;
-        public bool KbRecordKeys { get; private set; } = UserDefaults.KbRecordKeys;
         public bool KbRadarKeys { get; private set; } = UserDefaults.KbRadarKeys;
         public bool KbPointKeys { get; private set; } = UserDefaults.KbPointKeys;
 
@@ -181,10 +180,6 @@ namespace vMenuClient
                 else if (item == kbDriftMode)
                 {
                     KbDriftMode = _checked;
-                }
-                else if (item == kbRecordKeys)
-                {
-                    KbRecordKeys = _checked;
                 }
                 else if (item == kbRadarKeys)
                 {
@@ -571,7 +566,6 @@ namespace vMenuClient
                 keybindMenu.AddMenuItem(kbDriftMode);
             }
             // always allowed keybind menu options
-            keybindMenu.AddMenuItem(kbRecordKeys);
             keybindMenu.AddMenuItem(kbRadarKeys);
             keybindMenu.AddMenuItem(kbPointKeysCheckbox);
             keybindMenu.AddMenuItem(backBtn);

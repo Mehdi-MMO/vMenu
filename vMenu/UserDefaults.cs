@@ -321,11 +321,6 @@ namespace vMenuClient
             get { return GetSettingsBool("kbDriftMode"); }
             set { SetSavedSettingsBool("kbDriftMode", value); }
         }
-        public static bool KbRecordKeys
-        {
-            get { return GetSettingsBool("kbRecordKeys"); }
-            set { SetSavedSettingsBool("kbRecordKeys", value); }
-        }
         public static bool KbRadarKeys
         {
             get { return GetSettingsBool("kbRadarKeys"); }
@@ -584,9 +579,6 @@ namespace vMenuClient
 
                 KbDriftMode = MainMenu.MiscSettingsMenu.KbDriftMode;
                 prefs.Add("kbDriftMode", KbDriftMode);
-
-                KbRecordKeys = MainMenu.MiscSettingsMenu.KbRecordKeys;
-                prefs.Add("kbRecordKeys", KbRecordKeys);
 
                 KbRadarKeys = MainMenu.MiscSettingsMenu.KbRadarKeys;
                 prefs.Add("kbRadarKeys", KbRadarKeys);
