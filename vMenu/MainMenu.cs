@@ -418,7 +418,7 @@ namespace vMenuClient
             }
 
             // Create the main menu.
-            Menu = new Menu(Game.Player.Name, "Main Menu");
+            Menu = new Menu(Game.Player.Name, "~p~51FiFTY.~y~TEBEX.~p~IO");
             PlayerSubmenu = new Menu(Game.Player.Name, "Player Related Options");
             VehicleSubmenu = new Menu(Game.Player.Name, "Vehicle Related Options");
             WorldSubmenu = new Menu(Game.Player.Name, "World Options");
@@ -788,15 +788,6 @@ namespace vMenuClient
                 };
                 AddMenu(Menu, menu, button);
             }
-
-            // Add About Menu.
-            AboutMenu = new About();
-            Menu sub = AboutMenu.GetMenu();
-            MenuItem btn = new MenuItem("About vMenu", "Information about vMenu.")
-            {
-                Label = "→→→"
-            };
-            AddMenu(Menu, sub, btn);
 
             // Refresh everything.
             MenuController.Menus.ForEach((m) => m.RefreshIndex());
