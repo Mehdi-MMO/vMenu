@@ -582,7 +582,7 @@ namespace vMenuClient
             {
                 BannedPlayersMenu = new BannedPlayers();
                 Menu menu = BannedPlayersMenu.GetMenu();
-                MenuItem button = new MenuItem("Banned Players", "View and manage all banned players in this menu.")
+                MenuItem button = new MenuItem("~r~Banned ^5Players", "View and manage all banned players in this menu.")
                 {
                     Label = "→→→"
                 };
