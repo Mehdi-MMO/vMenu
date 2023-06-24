@@ -416,10 +416,11 @@ namespace vMenuClient
             }
 
             // Create the main menu.
-            Menu = new Menu(Game.Player.Name, "~p~51FiFTY.~y~TEBEX.~p~IO");
-            PlayerSubmenu = new Menu(Game.Player.Name, "Player Related Options");
-            VehicleSubmenu = new Menu(Game.Player.Name, "Vehicle Related Options");
-            WorldSubmenu = new Menu(Game.Player.Name, "World Options");
+            //Menu = new Menu(Game.Player.Name, "~p~51FiFTY.~y~TEBEX.~p~IO");
+            Menu = new Menu("", "~p~51FiFTY.~y~TEBEX.~p~IO");
+            PlayerSubmenu = new Menu("", "Player Related Options");
+            VehicleSubmenu = new Menu("", "Vehicle Related Options");
+            WorldSubmenu = new Menu("", "World Options");
 
             // Add the main menu to the menu pool.
             MenuController.AddMenu(Menu);
@@ -681,7 +682,7 @@ namespace vMenuClient
 
                 MpPedCustomizationMenu = new MpPedCustomization();
                 Menu menu2 = MpPedCustomizationMenu.GetMenu();
-                MenuItem button2 = new MenuItem("MP Ped Customization", "Create, edit, save and load multiplayer peds. ~r~Note, you can only save peds created in this submenu. vMenu can NOT detect peds created outside of this submenu. Simply due to GTA limitations.")
+                MenuItem button2 = new MenuItem("MP Ped Customization", "Create, edit, save and load multiplayer peds. ~r~Note, you can only save peds created in this submenu. we can NOT detect peds created outside of this submenu. Simply due to GTA limitations.")
                 {
                     Label = "→→→"
                 };
@@ -757,19 +758,19 @@ namespace vMenuClient
             {
                 MiscSettingsMenu = new MiscSettings();
                 Menu menu = MiscSettingsMenu.GetMenu();
-                MenuItem button = new MenuItem("~o~Misc Settings", "Miscellaneous vMenu options/settings can be configured here. You can also save your settings in this menu.")
+                MenuItem button = new MenuItem("~o~Misc Settings", "Miscellaneous Menu options/settings can be configured here. You can also save your settings in this menu.")
                 {
                     Label = "→→→"
                 };
                 AddMenu(Menu, menu, button);
             }
-
+            
             // Refresh everything.
             MenuController.Menus.ForEach((m) => m.RefreshIndex());
 
             if (!GetSettingsBool(Setting.vmenu_use_permissions))
             {
-                Notify.Alert("vMenu is set up to ignore permissions, default permissions will be used.");
+                Notify.Alert("Menu is set up to ignore permissions, default permissions will be used.");
             }
 
             if (PlayerSubmenu.Size > 0)

@@ -564,7 +564,7 @@ namespace vMenuClient
                             {
                                 BeginTextCommandDisplayHelp("TWOSTRINGS");
                                 AddTextComponentSubstringPlayerName("Hold ~INPUT_SWITCH_VISOR~ to flip your helmet visor open or closed");
-                                AddTextComponentSubstringPlayerName("when on foot or on a motorcycle and when vMenu is closed.");
+                                AddTextComponentSubstringPlayerName("when on foot or on a motorcycle and when Menu is closed.");
                                 EndTextCommandDisplayHelp(0, false, true, 6000);
                             }
                         }
