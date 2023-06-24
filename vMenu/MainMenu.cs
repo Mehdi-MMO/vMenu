@@ -596,7 +596,7 @@ namespace vMenuClient
                 };
             }
 
-            MenuItem playerSubmenuBtn = new MenuItem("~o~Player Related Options", "Open this submenu for player related subcategories.") { Label = "→→→" };
+            MenuItem playerSubmenuBtn = new MenuItem("~p~Player Related Options", "Open this submenu for player related subcategories.") { Label = "→→→" };
             Menu.AddMenuItem(playerSubmenuBtn);
 
             // Add the player options menu.
@@ -757,7 +757,7 @@ namespace vMenuClient
             {
                 MiscSettingsMenu = new MiscSettings();
                 Menu menu = MiscSettingsMenu.GetMenu();
-                MenuItem button = new MenuItem("~p~Misc Settings", "Miscellaneous vMenu options/settings can be configured here. You can also save your settings in this menu.")
+                MenuItem button = new MenuItem("~o~Misc Settings", "Miscellaneous vMenu options/settings can be configured here. You can also save your settings in this menu.")
                 {
                     Label = "→→→"
                 };

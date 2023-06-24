@@ -43,7 +43,7 @@ namespace vMenuClient
             menu = new Menu(Game.Player.Name, "Weapon Options");
 
             MenuItem getAllWeapons = new MenuItem("Get All Weapons", "Get all weapons.");
-            MenuItem removeAllWeapons = new MenuItem("Remove All Weapons", "Removes all weapons in your inventory.");
+            MenuItem removeAllWeapons = new MenuItem("~r~Remove All Weapons", "Removes all weapons in your inventory.");
             MenuCheckboxItem unlimitedAmmo = new MenuCheckboxItem("Unlimited Ammo", "Unlimited ammonition supply.", UnlimitedAmmo);
             MenuCheckboxItem noReload = new MenuCheckboxItem("No Reload", "Never reload.", NoReload);
             MenuItem setAmmo = new MenuItem("Set All Ammo Count", "Set the amount of ammo in all your weapons.");
