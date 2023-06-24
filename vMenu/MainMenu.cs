@@ -41,7 +41,6 @@ namespace vMenuClient
         public static WeatherOptions WeatherOptionsMenu { get; private set; }
         public static WeaponOptions WeaponOptionsMenu { get; private set; }
         public static WeaponLoadouts WeaponLoadoutsMenu { get; private set; }
-        public static Recording RecordingMenu { get; private set; }
         public static MiscSettings MiscSettingsMenu { get; private set; }
         public static VoiceChat VoiceChatSettingsMenu { get; private set; }
         public static bool NoClipEnabled { get { return NoClip.IsNoclipActive(); } set { NoClip.SetNoclipActive(value); } }
@@ -391,7 +390,7 @@ namespace vMenuClient
             }
 
             bool canUseMenu()
-            {
+            {1f
                 if (GetSettingsBool(Setting.vmenu_menu_staff_only) == false) return true;
                 else if (IsAllowed(Permission.Staff)) return true;
                 return false;
@@ -582,7 +581,7 @@ namespace vMenuClient
             {
                 BannedPlayersMenu = new BannedPlayers();
                 Menu menu = BannedPlayersMenu.GetMenu();
-                MenuItem button = new MenuItem("~r~Banned ^5Players", "View and manage all banned players in this menu.")
+                MenuItem button = new MenuItem("~r~Banned Players", "View and manage all banned players in this menu.")
                 {
                     Label = "→→→"
                 };
@@ -597,7 +596,7 @@ namespace vMenuClient
                 };
             }
 
-            MenuItem playerSubmenuBtn = new MenuItem("Player Related Options", "Open this submenu for player related subcategories.") { Label = "→→→" };
+            MenuItem playerSubmenuBtn = new MenuItem("~o~Player Related Options", "Open this submenu for player related subcategories.") { Label = "→→→" };
             Menu.AddMenuItem(playerSubmenuBtn);
 
             // Add the player options menu.
@@ -612,7 +611,7 @@ namespace vMenuClient
                 AddMenu(PlayerSubmenu, menu, button);
             }
 
-            MenuItem vehicleSubmenuBtn = new MenuItem("Vehicle Related Options", "Open this submenu for vehicle related subcategories.") { Label = "→→→" };
+            MenuItem vehicleSubmenuBtn = new MenuItem("~y~Vehicle Related Options", "Open this submenu for vehicle related subcategories.") { Label = "→→→" };
             Menu.AddMenuItem(vehicleSubmenuBtn);
             // Add the vehicle options Menu.
             if (IsAllowed(Permission.VOMenu))
@@ -767,21 +766,11 @@ namespace vMenuClient
                 AddMenu(Menu, menu, button);
             }
 
-            {
-                RecordingMenu = new Recording();
-                Menu menu = RecordingMenu.GetMenu();
-                MenuItem button = new MenuItem("Recording Options", "In-game recording options.")
-                {
-                    Label = "→→→"
-                };
-                AddMenu(Menu, menu, button);
-            }
-
             // Add misc settings menu.
             {
                 MiscSettingsMenu = new MiscSettings();
                 Menu menu = MiscSettingsMenu.GetMenu();
-                MenuItem button = new MenuItem("Misc Settings", "Miscellaneous vMenu options/settings can be configured here. You can also save your settings in this menu.")
+                MenuItem button = new MenuItem("~p~Misc Settings", "Miscellaneous vMenu options/settings can be configured here. You can also save your settings in this menu.")
                 {
                     Label = "→→→"
                 };
