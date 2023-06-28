@@ -1838,7 +1838,7 @@ namespace vMenuClient
                 VehicleModMenu.AddMenuItem(headlightColor);
                 VehicleModMenu.AddMenuItem(turbo);
                 VehicleModMenu.AddMenuItem(bulletProofTires);
-                VehicleModMenu.AddMenuItem(driftTires);
+                //VehicleModMenu.AddMenuItem(driftTires);
                 // Create a list of tire smoke options.
                 List<string> tireSmokes = new List<string>() { "Red", "Orange", "Yellow", "Gold", "Light Green", "Dark Green", "Light Blue", "Dark Blue", "Purple", "Pink", "Black" };
                 Dictionary<string, int[]> tireSmokeColors = new Dictionary<string, int[]>()
