@@ -290,6 +290,7 @@ namespace vMenuClient
                 menu.AddMenuItem(cleanVehicle); // CLEAN VEHICLE
                 menu.AddMenuItem(setDirtLevel); // SET DIRT LEVEL
             }
+            menu.AddMenuItem(modMenuInfoButton); // modMenuInfoButton VEHICLE
             if (IsAllowed(Permission.VOMod)) // MOD MENU
             {
                 menu.AddMenuItem(modMenuBtn);
