@@ -89,6 +89,7 @@ namespace vMenuClient
             // Create buttons.
             MenuItem fixVehicle = new MenuItem("Repair Vehicle", "Repair any visual and physical damage present on your vehicle.");
             MenuItem cleanVehicle = new MenuItem("Wash Vehicle", "Clean your vehicle.");
+            MenuItem modMenuInfoButton = new MenuItem("~p~Head Over To 51FiFTY Customs To Mod Your Vehicle", "Head Over To 51FiFTY Customs (check map)");
             MenuItem toggleEngine = new MenuItem("Toggle Engine On/Off", "Turn your engine on/off.");
             MenuItem setLicensePlateText = new MenuItem("Set License Plate Text", "Enter a custom license plate for your vehicle.");
             MenuItem modMenuBtn = new MenuItem("Mod Menu", "Tune and customize your vehicle here.")
